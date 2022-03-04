@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Powerdown.ogg-891d755802d4ea41110d963a83db2bff.oggstr"
+
+[deps]
+
+source_file="res://Music/Powerdown.ogg"
+dest_files=[ "res://.import/Powerdown.ogg-891d755802d4ea41110d963a83db2bff.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

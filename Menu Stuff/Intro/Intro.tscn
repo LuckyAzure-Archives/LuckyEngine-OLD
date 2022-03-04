@@ -1,0 +1,89 @@
+[gd_scene load_steps=39 format=2]
+
+[ext_resource path="res://Font/Muffninja-Regular-edited.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://menu.PNG" type="Texture" id=3]
+[ext_resource path="res://Menu Stuff/Intro/Intro.gd" type="Script" id=5]
+[ext_resource path="res://Menu Stuff/Intro/FNF-Logo.png" type="Texture" id=6]
+[ext_resource path="res://Menu Stuff/Intro/Logo.gd" type="Script" id=7]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0006.png" type="Texture" id=8]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0001.png" type="Texture" id=9]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0008.png" type="Texture" id=10]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0009.png" type="Texture" id=11]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0010.png" type="Texture" id=12]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0011.png" type="Texture" id=13]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0003.png" type="Texture" id=14]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0007.png" type="Texture" id=15]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0012.png" type="Texture" id=16]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0013.png" type="Texture" id=17]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0002.png" type="Texture" id=18]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0014.png" type="Texture" id=19]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0015.png" type="Texture" id=20]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0004.png" type="Texture" id=21]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0005.png" type="Texture" id=22]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0027.png" type="Texture" id=23]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0019.png" type="Texture" id=24]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0017.png" type="Texture" id=25]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0021.png" type="Texture" id=26]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0030.png" type="Texture" id=27]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0024.png" type="Texture" id=28]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0020.png" type="Texture" id=29]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0022.png" type="Texture" id=30]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0018.png" type="Texture" id=31]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0016.png" type="Texture" id=32]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0026.png" type="Texture" id=33]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0028.png" type="Texture" id=34]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0025.png" type="Texture" id=35]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0029.png" type="Texture" id=36]
+[ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0023.png" type="Texture" id=37]
+[ext_resource path="res://Sound/confirmMenu.ogg" type="AudioStream" id=38]
+
+[sub_resource type="DynamicFont" id=4]
+size = 75
+font_data = ExtResource( 1 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 18 ), ExtResource( 14 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 8 ), ExtResource( 15 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 32 ), ExtResource( 25 ), ExtResource( 31 ), ExtResource( 24 ), ExtResource( 29 ), ExtResource( 26 ), ExtResource( 30 ), ExtResource( 37 ), ExtResource( 28 ), ExtResource( 35 ), ExtResource( 33 ), ExtResource( 23 ), ExtResource( 34 ), ExtResource( 36 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "default",
+"speed": 24.0
+} ]
+
+[node name="Intro" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2( 640, 360 )
+rotating = true
+current = true
+
+[node name="Menu" type="Sprite" parent="."]
+visible = false
+position = Vector2( -3, -38 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Label" type="RichTextLabel" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gf" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 921, 388 )
+frames = SubResource( 3 )
+frame = 16
+playing = true
+
+[node name="Logo" type="Sprite" parent="."]
+visible = false
+position = Vector2( 379, 228 )
+texture = ExtResource( 6 )
+script = ExtResource( 7 )
+
+[node name="Select" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 38 )

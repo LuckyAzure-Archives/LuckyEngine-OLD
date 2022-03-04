@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SNAP.ogg-62aa04da70149edfed07b08b3a0c8316.oggstr"
+
+[deps]
+
+source_file="res://Assets/images/Arrows/SNAP.ogg"
+dest_files=[ "res://.import/SNAP.ogg-62aa04da70149edfed07b08b3a0c8316.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

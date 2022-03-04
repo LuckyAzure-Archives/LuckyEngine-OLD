@@ -1,0 +1,102 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Font/pixel.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://HUD/FPS Counter.gd" type="Script" id=2]
+[ext_resource path="res://HUD/Fade.gd" type="Script" id=3]
+[ext_resource path="res://HUD/Trans.gd" type="Script" id=4]
+[ext_resource path="res://HUD/Song Status.gd" type="Script" id=5]
+[ext_resource path="res://System/Song Status/placeholder.png" type="Texture" id=6]
+[ext_resource path="res://Font/Muffninja-Regular-edited.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Music/freakyMenu.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Music.gd" type="Script" id=9]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+width = 1
+
+[sub_resource type="Gradient" id=6]
+offsets = PoolRealArray( 0, 0.2, 0.8, 1 )
+colors = PoolColorArray( 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0 )
+
+[sub_resource type="GradientTexture" id=5]
+gradient = SubResource( 6 )
+width = 1200
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 28
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = -3
+font_data = ExtResource( 7 )
+
+[node name="HUD" type="CanvasLayer"]
+layer = 2
+
+[node name="Fade" type="Sprite" parent="."]
+visible = false
+position = Vector2( 640, 360 )
+scale = Vector2( 1280, 720 )
+texture = SubResource( 3 )
+script = ExtResource( 3 )
+
+[node name="Trans" type="Sprite" parent="."]
+rotation = 1.5708
+scale = Vector2( 1, 1280 )
+texture = SubResource( 5 )
+centered = false
+offset = Vector2( -1200, -1 )
+script = ExtResource( 4 )
+
+[node name="FPS Counter" type="Label" parent="."]
+margin_left = 14.0
+margin_top = 7.0
+margin_right = 114.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 1 )
+text = "FPS:"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ver" type="Label" parent="."]
+margin_left = 2.0
+margin_top = 707.0
+margin_right = 255.0
+margin_bottom = 722.0
+custom_fonts/font = SubResource( 1 )
+text = "Lucky's Engine ALPHA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Song Status" type="Sprite" parent="."]
+position = Vector2( 800, 0 )
+texture = ExtResource( 6 )
+centered = false
+script = ExtResource( 5 )
+
+[node name="Text" type="RichTextLabel" parent="Song Status"]
+margin_left = 12.0
+margin_top = 17.0
+margin_right = 312.0
+margin_bottom = 149.0
+custom_fonts/normal_font = SubResource( 7 )
+text = "TEST"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+script = ExtResource( 9 )

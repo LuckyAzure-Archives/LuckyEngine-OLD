@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Characters/BOYFRIEND/BOYFRIEND.png" type="Texture" id=1]
+[ext_resource path="res://System/Player.gd" type="Script" id=2]
+
+[node name="Player" type="Sprite"]
+position = Vector2( 391, 100 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 1, 20 )
+region_enabled = true
+region_rect = Rect2( 0, 2344, 406, 392 )
+script = ExtResource( 2 )

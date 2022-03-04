@@ -1,0 +1,76 @@
+{
+   "Stage": {
+      "Enemy": {
+         "x": -100,
+         "y": 100
+      },
+      "GF": {
+         "x": 0,
+         "y": 80
+      },
+      "Player": {
+         "x": -100,
+         "y": 100
+      },
+      "StageTexture": [
+         {
+            "filename": "2.png",
+            "name": "Background",
+            "index": 1,
+            "becentered": true,
+            "x": 0,
+            "y": 100,
+            "width": 1400,
+            "height": 602
+         },
+         {
+            "filename": "1.png",
+            "name": "Head",
+            "index": 0,
+            "becentered": true,
+            "x": 400,
+            "y": -130,
+            "width": 150,
+            "height": 150,
+            "animations": [
+                {
+                  "x": 400,
+                  "y": -130,
+                  "width": 150,
+                  "height": 150
+                },
+                {
+                  "x": 400,
+                  "y": -100,
+                  "width": 180,
+                  "height": 120
+                }
+             ]
+         },
+         {
+            "filename": "1.png",
+            "name": "Head2",
+            "index": 0,
+            "becentered": true,
+            "x": 550,
+            "y": -180,
+            "width": 150,
+            "height": 150,
+            "animations": [
+                {
+                  "x": 550,
+                  "y": -150,
+                  "width": 180,
+                  "height": 120
+                },
+                {
+                  "x": 550,
+                  "y": -180,
+                  "width": 150,
+                  "height": 150
+                }
+             ]
+         }
+      ]
+   }
+}

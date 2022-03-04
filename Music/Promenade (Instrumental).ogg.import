@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Promenade (Instrumental).ogg-62d325e23c7e9d216cc57d04e877ba1f.oggstr"
+
+[deps]
+
+source_file="res://Music/Promenade (Instrumental).ogg"
+dest_files=[ "res://.import/Promenade (Instrumental).ogg-62d325e23c7e9d216cc57d04e877ba1f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

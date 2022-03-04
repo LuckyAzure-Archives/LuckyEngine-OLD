@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Menu Stuff/Menu/menuBG.png" type="Texture" id=1]
+[ext_resource path="res://Menu Stuff/Menu/Menu.gd" type="Script" id=4]
+[ext_resource path="res://Font/Muffninja-Regular-edited.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Menu Stuff/Menu/Button.gd" type="Script" id=7]
+[ext_resource path="res://Sound/scrollMenu.wav" type="AudioStream" id=8]
+[ext_resource path="res://Sound/confirmMenu.ogg" type="AudioStream" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = -10
+font_data = ExtResource( 5 )
+
+[node name="Menu" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="BackGround" type="Sprite" parent="."]
+position = Vector2( 643, 365 )
+texture = ExtResource( 1 )
+
+[node name="FreePlay" type="RichTextLabel" parent="."]
+margin_left = 446.0
+margin_top = 357.0
+margin_right = 872.0
+margin_bottom = 429.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center][shake rate=30 level=5]FREEPLAY"
+text = "FREEPLAY"
+scroll_active = false
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Online" type="RichTextLabel" parent="."]
+margin_left = 505.0
+margin_top = 242.0
+margin_right = 821.0
+margin_bottom = 314.0
+rect_pivot_offset = Vector2( -894, -90 )
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center][shake rate=30 level=5]ONLINE"
+text = "ONLINE"
+scroll_active = false
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="RichTextLabel" parent="."]
+margin_left = 467.0
+margin_top = 476.0
+margin_right = 842.0
+margin_bottom = 548.0
+rect_pivot_offset = Vector2( -894, -90 )
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center][shake rate=30 level=5]OPTIONS"
+text = "OPTIONS"
+scroll_active = false
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Move" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="Select" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
