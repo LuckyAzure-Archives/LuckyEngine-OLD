@@ -76,7 +76,7 @@ __meta__ = {
 visible = false
 position = Vector2( 921, 388 )
 frames = SubResource( 3 )
-frame = 16
+frame = 19
 playing = true
 
 [node name="Logo" type="Sprite" parent="."]
