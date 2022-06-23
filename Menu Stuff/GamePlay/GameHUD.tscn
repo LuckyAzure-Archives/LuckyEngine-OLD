@@ -1,6 +1,6 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://Névtelen.png" type="Texture" id=1]
+[ext_resource path="res://Képkivágás.PNG" type="Texture" id=1]
 [ext_resource path="res://Menu Stuff/GamePlay/GameHUD/HPBar.gd" type="Script" id=2]
 [ext_resource path="res://Font/vcr.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Menu Stuff/GamePlay/GameHUD/Status.gd" type="Script" id=4]
@@ -8,6 +8,12 @@
 [ext_resource path="res://Assets/Scripts/Stage/Arrow.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Menu Stuff/GamePlay/Player1.gd" type="Script" id=7]
 [ext_resource path="res://Menu Stuff/GamePlay/Player2.gd" type="Script" id=8]
+
+[sub_resource type="DynamicFont" id=6]
+size = 15
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
 
 [sub_resource type="BitmapFont" id=1]
 
@@ -26,8 +32,8 @@ border_width_bottom = 3
 border_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 21
-outline_size = 2
+size = 15
+outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
@@ -44,28 +50,37 @@ offset = Vector2( 640, 360 )
 transform = Transform2D( 1, 0, 0, 1, 640, 360 )
 script = ExtResource( 5 )
 
+[node name="debug" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="debug"]
+margin_left = 26.0
+margin_top = 27.0
+margin_right = 325.0
+margin_bottom = 161.0
+custom_fonts/font = SubResource( 6 )
+text = "Section:
+
+"
+
 [node name="Névtelen" type="Sprite" parent="."]
 visible = false
-position = Vector2( -646, -366 )
+position = Vector2( -645, -365 )
 texture = ExtResource( 1 )
 centered = false
 
 [node name="HPBar" type="ProgressBar" parent="."]
 margin_left = -301.0
-margin_top = -281.0
+margin_top = -310.0
 margin_right = 300.0
-margin_bottom = -262.0
+margin_bottom = -291.0
 custom_fonts/font = SubResource( 1 )
 custom_styles/fg = SubResource( 2 )
 custom_styles/bg = SubResource( 3 )
 value = 50.0
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Status" type="Position2D" parent="."]
-position = Vector2( 0, -234 )
+position = Vector2( 0, -250 )
 scale = Vector2( 1.1, 1.1 )
 script = ExtResource( 4 )
 
@@ -75,12 +90,9 @@ margin_top = -20.0
 margin_right = 640.0
 margin_bottom = 20.0
 custom_fonts/font = SubResource( 4 )
-text = "Score: 0 | Misses: 0 | Accuracy: 100% | ???"
+text = "Score:0 | Combo Breaks:0 | Accuracy:0 % | N/A"
 align = 1
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 370, 0 )
@@ -102,7 +114,6 @@ position = Vector2( 55, 0 )
 
 [node name="Right" parent="Player2" instance=ExtResource( 6 )]
 position = Vector2( 165, 0 )
-scale = Vector2( 0.7, 0.7 )
 
 [node name="Player1" type="Position2D" parent="."]
 position = Vector2( 315, 267 )

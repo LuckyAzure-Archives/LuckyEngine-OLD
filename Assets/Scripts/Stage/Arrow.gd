@@ -8,7 +8,8 @@ var frametime = 0
 var frames = 0
 var splashframetime = 0
 var splashframes = 0
-var ArrowActive = true
+var ArrowActive = false
+var ArrowSplash = false
 
 func _ready():
 	dir = name
@@ -54,25 +55,26 @@ func _process(delta):
 	var InputPressed
 	if get_parent().player:
 		InputPressed = Input.is_action_pressed(dir)
-		ArrowActive = Input.is_action_pressed("ui_accept")
 	match animation:
 		"":
 			if InputPressed:
-				match ArrowActive:
-					false:
-						frametime = 1
-						animation = "Hold"
-						texture = load("res://Assets/images/Arrows/" + ArrowType + "/" + dir + "_" + animation + str(frames) + ".png")
-					true:
-						frametime = 1
-						animation = "Glow"
+				if ArrowActive:
+					frametime = 1
+					animation = "Glow"
+					texture = load("res://Assets/images/Arrows/" + ArrowType + "/" + dir + "_" + animation + str(frames) + ".png")
+					if ArrowSplash == true:
 						splashframes = 0
 						splashframetime = 2
-						texture = load("res://Assets/images/Arrows/" + ArrowType + "/" + dir + "_" + animation + str(frames) + ".png")
 						$Splash.visible = true
+				else:
+					frametime = 1
+					animation = "Hold"
+					texture = load("res://Assets/images/Arrows/" + ArrowType + "/" + dir + "_" + animation + str(frames) + ".png")
 		"Hold":
 			if not InputPressed:
 				animation = ""
 		"Glow":
 			if not InputPressed:
 				animation = ""
+	ArrowActive = false
+	ArrowSplash = false

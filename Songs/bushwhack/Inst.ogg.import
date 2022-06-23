@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Inst.ogg-8f5e2fa74353dac85dee245a4d230cfe.oggstr"
+
+[deps]
+
+source_file="res://Songs/bushwhack/Inst.ogg"
+dest_files=[ "res://.import/Inst.ogg-8f5e2fa74353dac85dee245a4d230cfe.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

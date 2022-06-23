@@ -15,6 +15,11 @@ func _process(delta):
 		beat3 = HUD.get_node("Music").beat
 		if get_tree().get_current_scene().has_method("_BPM2"):
 			get_tree().get_current_scene()._BPM2()
-	AudioSync = get_playback_position() + AudioServer.get_time_since_last_mix() - AudioServer.get_output_latency()
-	Global.SongName = stream.resource_path.get_file().get_basename().to_upper()
+	if playing:
+		if AudioSync > get_playback_position() + 1 and AudioSync < get_playback_position() - 1:
+			AudioSync = get_playback_position() + AudioServer.get_time_since_last_mix() - AudioServer.get_output_latency()
+		else:
+			AudioSync += 1 * delta
+	else:
+		AudioSync = 0
 	beat = int(AudioSync * BPM / 60.0)

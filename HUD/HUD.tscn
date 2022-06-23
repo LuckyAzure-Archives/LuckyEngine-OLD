@@ -76,9 +76,6 @@ margin_right = 255.0
 margin_bottom = 722.0
 custom_fonts/font = SubResource( 1 )
 text = "Lucky's Engine ALPHA"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Song Status" type="Sprite" parent="."]
 position = Vector2( 800, 0 )

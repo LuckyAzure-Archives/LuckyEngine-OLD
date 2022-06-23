@@ -17,6 +17,27 @@ func _ready():
 	data_file.close()
 	stage_data = data_json.result
 	print(data_json.result)
+	var Positions = [
+		[#boyfriend
+		stage_data.Stage.Player.x, stage_data.Stage.Player.y,
+		stage_data.Stage.Player.cameraoffsetx, stage_data.Stage.Player.cameraoffsety
+		],
+		[#girlfriend
+		stage_data.Stage.GF.x, stage_data.Stage.GF.y,
+		stage_data.Stage.GF.cameraoffsetx, stage_data.Stage.GF.cameraoffsety,
+		],
+		[#enemy
+		stage_data.Stage.Enemy.x, stage_data.Stage.Enemy.y,
+		stage_data.Stage.Enemy.cameraoffsetx, stage_data.Stage.Enemy.cameraoffsety
+		]
+	]
+	var CameraData = [
+		stage_data.Stage.Camera.offsetx,
+		stage_data.Stage.Camera.offsety,
+		stage_data.Stage.Camera.zoom,
+		stage_data.Stage.Camera.speed
+	]
+	get_tree().get_current_scene().Positioning(Positions,CameraData)
 	var texturenode = load("res://Menu Stuff/GamePlay/StageTexture.tscn")
 	for i in stage_data.Stage.StageTexture.size():
 		texture_data = stage_data.Stage.StageTexture[i]
