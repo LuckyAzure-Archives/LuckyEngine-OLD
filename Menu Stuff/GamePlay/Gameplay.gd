@@ -1,6 +1,8 @@
 extends Node2D
 
 var song_name = "powerdown"
+var Player1 = "boyfriend"
+var Player2 = "boyfriend"
 
 func _ready():
 	Global.SongName = song_name.to_upper()

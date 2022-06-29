@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/confirmMenu.wav-a5e0cc5e783d14493c265690bc8f8592.sample"
+path="res://.import/scrollMenu.wav-f933ad28c51b0ae84fc70662a921e90c.sample"
 
 [deps]
 
-source_file="res://Sound/confirmMenu.wav"
-dest_files=[ "res://.import/confirmMenu.wav-a5e0cc5e783d14493c265690bc8f8592.sample" ]
+source_file="res://Assets/Sound/scrollMenu.wav"
+dest_files=[ "res://.import/scrollMenu.wav-f933ad28c51b0ae84fc70662a921e90c.sample" ]
 
 [params]
 

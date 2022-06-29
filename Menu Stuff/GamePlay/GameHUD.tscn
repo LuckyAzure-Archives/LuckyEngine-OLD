@@ -100,7 +100,7 @@ scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 5 )
 
 [node name="Player2" type="Position2D" parent="."]
-position = Vector2( -315, 267 )
+position = Vector2( -315, 260 )
 script = ExtResource( 8 )
 
 [node name="Left" parent="Player2" instance=ExtResource( 6 )]
@@ -116,7 +116,7 @@ position = Vector2( 55, 0 )
 position = Vector2( 165, 0 )
 
 [node name="Player1" type="Position2D" parent="."]
-position = Vector2( 315, 267 )
+position = Vector2( 315, 260 )
 script = ExtResource( 7 )
 
 [node name="Left" parent="Player1" instance=ExtResource( 6 )]

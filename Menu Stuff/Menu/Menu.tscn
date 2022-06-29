@@ -4,8 +4,8 @@
 [ext_resource path="res://Menu Stuff/Menu/Menu.gd" type="Script" id=4]
 [ext_resource path="res://Font/Muffninja-Regular-edited.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Menu Stuff/Menu/Button.gd" type="Script" id=7]
-[ext_resource path="res://Sound/scrollMenu.wav" type="AudioStream" id=8]
-[ext_resource path="res://Sound/confirmMenu.ogg" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Sound/scrollMenu.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Assets/Sound/confirmMenu.ogg" type="AudioStream" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80

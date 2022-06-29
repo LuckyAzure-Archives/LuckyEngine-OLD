@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Menu Stuff/Options/Options.gd" type="Script" id=1]
 [ext_resource path="res://Menu Stuff/Menu/Button.gd" type="Script" id=2]
-[ext_resource path="res://Sound/scrollMenu.wav" type="AudioStream" id=3]
-[ext_resource path="res://Sound/confirmMenu.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Assets/Sound/scrollMenu.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Sound/confirmMenu.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Menu Stuff/Menu/menuBG.png" type="Texture" id=5]
 [ext_resource path="res://Font/Muffninja-Regular-edited.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Menu Stuff/Options/ChangeName.gd" type="Script" id=7]

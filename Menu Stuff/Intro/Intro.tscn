@@ -35,7 +35,7 @@
 [ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0025.png" type="Texture" id=35]
 [ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0029.png" type="Texture" id=36]
 [ext_resource path="res://Menu Stuff/Intro/gf/GF Dancing Beat0023.png" type="Texture" id=37]
-[ext_resource path="res://Sound/confirmMenu.ogg" type="AudioStream" id=38]
+[ext_resource path="res://Assets/Sound/confirmMenu.ogg" type="AudioStream" id=38]
 
 [sub_resource type="DynamicFont" id=4]
 size = 75
@@ -76,7 +76,7 @@ __meta__ = {
 visible = false
 position = Vector2( 921, 388 )
 frames = SubResource( 3 )
-frame = 12
+frame = 19
 playing = true
 
 [node name="Logo" type="Sprite" parent="."]

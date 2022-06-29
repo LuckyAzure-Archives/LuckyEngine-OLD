@@ -12,6 +12,8 @@ func _process(delta):
 	if time <= 0:
 		time += 1000 * delta
 	elif HUD.get_node("Music").playing == false:
+		HUD.get_node("Music").stream.loop = false
+		get_parent().get_node("Voices").stream.loop = false
 		HUD.get_node("Music").play()
 		get_parent().get_node("Voices").play()
 	else:
@@ -84,22 +86,25 @@ func Arrow(pos,dir,size,type,mustHitSection):
 	
 	if dir2 <= 3:
 		notedata[dir2].append(pos)
+		notedata[dir2].sort()
 		get_node("Player1/" + dirs[dir2]).add_child(noteload.instance())
 	if dir2 > 3:
 		notedata[dir2].append(pos)
+		notedata[dir2].sort()
 		get_node("Player2/" + dirs[dir2]).add_child(noteload.instance())
+	
 
 func Notehit(dir,splash,accuracy):
 	get_node("Player1/" + dirs[dir]).ArrowActive = true
 	if splash:
 		$Status.scalescroller = 1.05
 	$Status.accuracy += accuracy * 4
-	$Status.maxaccuracy += 300 * 4
+	$Status.maxaccuracy += 250 * 4
 	notehit[dir] = 1
 	notedata[dir].remove(0)
 
 func Notemiss(dir):
-	$Status.maxaccuracy += 300 * 4
+	$Status.maxaccuracy += 250 * 4
 	notehit[dir] = 1
 	notedata[dir].remove(0)
 	$Status.miss()

@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Menu Stuff/Menu/menuBG.png" type="Texture" id=1]
 [ext_resource path="res://Menu Stuff/Lobby/Lobby.gd" type="Script" id=2]
 [ext_resource path="res://System/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Font/vcr.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Menu Stuff/Lobby/Select_Char.gd" type="Script" id=5]
+[ext_resource path="res://Assets/images/readyonline.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=2]
 size = 20
@@ -112,3 +113,7 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Readyonline" type="Sprite" parent="."]
+position = Vector2( 636, 587 )
+texture = ExtResource( 6 )
