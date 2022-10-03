@@ -16,7 +16,7 @@ func _process(delta):
 		if get_tree().get_current_scene().has_method("_BPM2"):
 			get_tree().get_current_scene()._BPM2()
 	if playing:
-		if AudioSync > get_playback_position() + 0.1 and AudioSync < get_playback_position() - 0.1:
+		if AudioSync > get_playback_position() + 0.01 and AudioSync < get_playback_position() - 0.01:
 			AudioSync = get_playback_position() + AudioServer.get_time_since_last_mix() - AudioServer.get_output_latency()
 		else:
 			AudioSync += (1 * delta) * pitch_scale
