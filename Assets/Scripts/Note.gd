@@ -14,7 +14,7 @@ func _process(delta):
 	var time = get_tree().get_current_scene().get_node("GameHUD").time
 	var hittable = notedata[data[1]][0] == Pos and notehit[data[1]] == 0
 	var ArrowSplash = false
-	position.y = (time - Pos) * 2
+	position.y = (time - Pos) * 3
 	visible = true
 	if data[1] > 3 and (time > Pos):
 		get_tree().get_current_scene().get_node("GameHUD").Notehitenemy(data[1])

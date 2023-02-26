@@ -14,7 +14,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Friday Night Funkin"
+config/name="Friday Night Funkin': Toast Engine"
 run/main_scene="res://Menu Stuff/Intro/Intro.tscn"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 

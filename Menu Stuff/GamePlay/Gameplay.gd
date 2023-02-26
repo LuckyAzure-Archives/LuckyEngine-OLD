@@ -1,6 +1,6 @@
 extends Node2D
 
-var song_name = "untold-loneliness"
+var song_name = "GunpowderV4"
 var Player1 = "boyfriend"
 var Player2 = "boyfriend"
 
@@ -8,7 +8,7 @@ func _ready():
 	Global.SongName = song_name.to_upper()
 	HUD.get_node("Music").stream = load("res://Songs/" + song_name + "/Inst.ogg")
 	HUD.get_node("Music").stream.loop = false
-	$Voices.stream = load("res://Songs/" + song_name + "/Voices.ogg")
+	$Voices.stream = load("res://Songs/" + song_name + "/Inst.ogg")
 	$Voices.stream.loop = false
 
 var Cameraoffset : Vector2
